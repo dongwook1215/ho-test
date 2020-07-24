@@ -1,0 +1,23 @@
+#wrapper {
+	width: 860px;
+	margin: 0 auto;
+}
+
+#wrapper > h1 {
+	text-align: center;
+}
+
+#title {
+	text-align: left;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+#date {
+	text-align: right;
+	font-weight: bold;
+}
+
+#anchor_tag {
+	text-align: center;
+}

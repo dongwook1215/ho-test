@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>Document</title>
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+	<div id="wrapper">
+		<h1>나의 일기장</h1>
+		{% for diary in diary_all %}
+			<hr>
+			<p id="title">제목: {{ diary.title }}</p>
+			<p id="date">{{ diary.date }}</p>
+			<p>{{ diary.summary }}...<a href="/viewmore/{{ diary.id }}">더보기</a></p>
+			<hr>
+		{% endfor %}
+	</div>
+</body>
+</html>

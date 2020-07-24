@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>Document</title>
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<script>flag = "{{ flag }}";</script>
+	<script src="{% static 'js/page_check.js' %}"></script>
+</head>
+<body>
+	<div id="wrapper">
+		<h1>나의 일기장</h1>
+		<hr>
+		<p id="title">제목: {{ diary.title }}</p>
+		<p id="date">{{ diary.date }}</p>
+		<p>{{ diary.text }}</p>
+		<hr>
+		<p id="anchor_tag">
+			<a href="/viewmore/{{ previous_id }}" name="previous">이전 읽기</a>
+			<a href="/" name="index">목록으로</a>
+			<a href="/viewmore/{{ next_id }}" name="next">다음 읽기</a>
+		</p>
+	</div>
+</body>
+</html>
